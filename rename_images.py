@@ -1,35 +1,6 @@
 import exifread
 import os
-from datetime import datetime
-
-#def get_metadata(file_path):
-#    try:
-#        with open(file_path, 'rb') as f:
-#            # Read the EXIF tags
-#            tags = exifread.process_file(f)
-#            # Get the 'DateTimeOriginal' tag which often contains the date taken
-#            date_taken_tag = tags.get('EXIF DateTimeOriginal')
-#            # Get the 'Make' tag which contains the camera make (manufacturer)
-#            make_tag = tags.get('Image Make') 
-#            # Convert the date taken value to a datetime object
-#            date_taken = None
-#            if date_taken_tag:
-#                date_taken = datetime.strptime(str(date_taken_tag), "%Y:%m:%d %H:%M:%S")
-#            
-#            return date_taken, make_tag
-#    except Exception as e:
-#        print(f"Error occurred while extracting metadata: {e}")
-#        return None, None
-## Example usage
-#file_path = "IMAG0004.jpg"
-#date_taken, make = get_metadata(file_path)
-#if date_taken and make:
-#    # Convert date taken to month-day-year format
-#    formatted_date_taken = date_taken.strftime("%m-%d-%Y")
-#    print(f"Date Taken: {formatted_date_taken}")
-#    print(f"Make: {make}")
-#else:
-#    print("Date Taken or Make not found.")
+from datetime import datetime            
 
 def extract_metadata(file_path):
     try: # open the file and put its exif data into a dictionary then return it
